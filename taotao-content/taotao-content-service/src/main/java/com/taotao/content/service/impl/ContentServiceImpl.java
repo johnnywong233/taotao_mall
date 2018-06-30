@@ -49,8 +49,7 @@ public class ContentServiceImpl implements ContentService {
             String json = jedisClient.hget(INDEX_CONTENT, cid + "");
             //查询到结果，把json转换成List返回
             if (StringUtils.isNotBlank(json)) {
-                List<TbContent> list = JsonUtils.jsonToList(json, TbContent.class);
-                return list;
+                return JsonUtils.jsonToList(json, TbContent.class);
             }
         } catch (Exception e) {
             e.printStackTrace();

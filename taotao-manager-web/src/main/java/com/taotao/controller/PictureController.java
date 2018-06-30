@@ -18,7 +18,7 @@ import java.util.Map;
 public class PictureController {
 
     @Value("${IMAGE_SERVER_URL}")
-    private String IMAGE_SERVER_URL;
+    private static String IMAGE_SERVER_URL;
 
     @RequestMapping("/pic/upload")
     @ResponseBody
